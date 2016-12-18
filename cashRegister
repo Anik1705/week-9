@@ -1,0 +1,37 @@
+class CashRegister :
+# Comment 1  
+   def __init__(self) :
+      self._itemCount = 0
+      self._totalPrice = 0.0
+      
+   # Comment 2
+   def addItem(self, price) :
+      self._itemCount = self._itemCount + 1
+      self._totalPrice = self._totalPrice + price 
+      
+   # Comment 3
+   def getTotal(self) :
+      return self._totalPrice
+      
+   # Comment 4
+   def getCount(self) :
+      return self._itemCount
+
+   # Comment 5
+   def clear(self) :
+      self._itemCount = 0
+      self._totalPrice = 0.0
+      
+   #  function pound set to get the value of the total in sterling without pence
+   def pound(self):    
+        self._poundSerling = int(self.totalPrice)
+
+   #  return the value of the fuction Pound
+   def getPounds(self) :           
+        return self._poundSerling
+    
+   # method giving change for the payment provided
+   def giveChange (self,payment):
+       self._payment = int(input("enter the amount given"))
+       self._change = self._totalPrice - self._payment
+
